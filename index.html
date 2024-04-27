@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Petranov</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+</head>
+<body class="font-[Poppins]">
+    <header class="bg-white sticky top-0">
+        <nav class="flex justify-between items-center w-[92%] mx-auto">
+            <div class="font-bold text-3xl md:text-base max-w-20">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="nav-links duration-500 md:static md:w-auto md:min-h-fit absolute bg-white min-h-[60vh] left-0 top-[-1000%] w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8">
+                    <li class="underline-link">
+                        <a class="hover:text-cyan-400" href="#section1">Top</a>
+                    </li>
+                    <li class="underline-link">
+                        <a class="hover:text-cyan-400" href="#section2">Skills</a>
+                    </li>
+                    <li class="underline-link">
+                        <a class="hover:text-cyan-400" href="">Projects</a>
+                    </li>
+                    <li class="underline-link">
+                        <a class="hover:text-cyan-400" href="#">Connect</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <div id="section1" class="p-5 container flex flex-col md:flex md:flex-row justify-center mx-auto items-center">
+        <div class="md:mr-5 md:text-left text-center mb-5">
+            <h1 class="font-black text-5xl md:text-5xl">Hi, I'm Alex</h1>
+            <p>My name is Alexander Petranov. 
+            I am a second year Software Engineering student
+            from Bulgaria.</p>
+        </div>
+        <div class="image-container">
+            <img id="selfie" src="images/selfie.jpg" class="outline md:max-w-sm max-w-xs rounded-full md:ml-5" alt="">
+            
+        </div>
+        <div class="triangle-image">
+            <img src="images/triangle.png" alt="">
+        </div>
+        <div class="square-image">
+            <img src="images/rounded-black-square-shape.png" alt="">
+        </div>
+        <div class="circle-image">
+            <img src="images/record.png" alt="">
+        </div>
+        <div class="rhombus-image">
+            <img src="images/rhombus.png" alt="">
+        </div>
+    </div>
+
+    <div id="section2" class="flex justify-center items-center font-black text-7xl">
+        SKILLS
+    </div>
+    <script>
+        const navLinks = document.querySelector('.nav-links');
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('top-[9%]');
+        }
+    </script>
+</body>
+</html>

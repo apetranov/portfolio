@@ -1,0 +1,155 @@
+  /* Base styles for the link */
+  .underline-link {
+    position: relative;
+    text-decoration: none;
+    color: #333; /* default text color */
+    transition: color 0.3s; /* transition for color change */
+    overflow: hidden;
+  }
+
+  /* Underline effect */
+  .underline-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0; /* initial width */
+    height: 8px; /* underline height */
+    background-color: #007bff; /* underline color */
+    transition: width 0.3s; /* transition for width change */
+  }
+
+  /* Hover effect */
+  .underline-link:hover::after {
+    width: 100%; /* expand the underline width */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container covers the full viewport height */
+  }
+
+.image-container {
+    position: relative;
+}
+
+
+@keyframes moveUpDownT {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(45deg); /* Adjust this value as needed */
+    }
+}
+
+@keyframes moveUpDownS {
+    0%, 100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(-10deg); /* Adjust this value as needed */
+    }
+}
+
+@keyframes moveUpDownC {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px); /* Adjust this value as needed */
+    }
+}
+
+
+.triangle-image {
+    position: absolute;
+    top: 70%; /* Set top inset */
+    left: 60%; /* Set left inset */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    max-width: 100px;
+    transform: rotate(45deg);
+    animation: moveUpDownT 2s ease-in-out infinite;
+}
+
+.square-image {
+    position: absolute;
+    top: 45%; /* Set top inset */
+    left: 20%; /* Set left inset */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    max-width: 50px;
+    transform: rotate(-10deg);
+    animation: moveUpDownS 5s ease-in-out infinite;
+}
+
+.circle-image {
+    position: absolute;
+    top: 75%; /* Set top inset */
+    left: 30%; /* Set left inset */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    max-width: 250px;
+    /*animation: moveUpDownC 6s ease-in-out infinite;*/
+    animation: moveUpDownC 8s ease-in-out infinite;
+}
+
+.rhombus-image {
+    position: absolute;
+    top: 60%; /* Set top inset */
+    left: 50%; /* Set left inset */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    max-width: 150px;
+    animation: moveUpDownC 3s ease-in-out infinite;
+}
+
+
+@media (max-width: 768px) {
+        .triangle-image {
+            position: absolute;
+            top: 50%; /* Set top inset */
+            left: 70%; /* Set left inset */
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            max-width: 50px;
+            transform: rotate(45deg);
+            animation: moveUpDownT 2s ease-in-out infinite;
+        }
+
+        .square-image {
+            position: absolute;
+            top: 20%; /* Set top inset */
+            left: 20%; /* Set left inset */
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            max-width: 50px;
+            transform: rotate(-10deg);
+            animation: moveUpDownS 5s ease-in-out infinite;
+        }
+        
+        .circle-image {
+            position: absolute;
+            top: 50%; /* Set top inset */
+            left: 30%; /* Set left inset */
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            max-width: 200px;
+            /*animation: moveUpDownC 6s ease-in-out infinite;*/
+            animation: moveUpDownC 8s ease-in-out infinite;
+        }
+
+        .rhombus-image {
+            position: absolute;
+            top: 40%; /* Set top inset */
+            left: 80%; /* Set left inset */
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            max-width: 150px;
+            animation: moveUpDownC 3s ease-in-out infinite;
+        }
+}
+
