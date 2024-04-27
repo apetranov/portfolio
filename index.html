@@ -17,7 +17,7 @@
     <header class="bg-white sticky top-0">
         <nav class="flex justify-between items-center w-[92%] mx-auto">
             <div class="font-bold text-3xl md:text-base max-w-20">
-                <img src="images/logo.png" alt="">
+                <img style="z-index: 2;" src="images/logo.png" alt="">
             </div>
             <div class="nav-links duration-500 md:static md:w-auto md:min-h-fit absolute bg-white min-h-[60vh] left-0 top-[-1000%] w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col flex md:items-center md:gap-[4vw] gap-8">
@@ -36,14 +36,14 @@
                 </ul>
             </div>
             <div class="flex items-center gap-6">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                <ion-icon style="z-index: 2;" onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
         </nav>
     </header>
 
     <div id="section1" class="p-5 container flex flex-col md:flex md:flex-row justify-center mx-auto items-center">
         <div class="md:mr-5 md:text-left text-center mb-5">
-            <h1 class="font-black text-5xl md:text-5xl">Hi, I'm Alex</h1>
+            <h1 class="font-black text-5xl md:text-5xl">Hi, I'm <span id="alex">Alex</span></h1>
             <p>My name is Alexander Petranov. 
             I am a second year Software Engineering student
             from Bulgaria.</p>
@@ -65,11 +65,14 @@
         </div>
     </div>
 
-    <div id="section2" class="flex justify-center items-center font-black text-7xl">
-        SKILLS
+    <div id="section2" class="m-5 flex justify-center items-center font-black text-7xl">
+        <div>
+            <h1 class="text-white text-stroke" style="top: 1px;">SKILLS</h1>
+        </div>
     </div>
     <script>
         const navLinks = document.querySelector('.nav-links');
+        const imageContainer = document.querySelector('.image-container');
         function onToggleMenu(e) {
             e.name = e.name === 'menu' ? 'close' : 'menu';
             navLinks.classList.toggle('top-[9%]');

@@ -36,6 +36,41 @@
     z-index: -1;
 }
 
+@keyframes name {
+    0% {
+        color: black;
+    }
+    25% {
+        color: red;
+    }
+    50% {
+        color: rgb(0, 255, 0);
+    }
+    75% {
+        color: rgb(0, 0, 200);
+    }
+    100% {
+        color: black;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        width: 384px;
+    }
+    50% {
+        width: 370px;
+    }
+    100% {
+        width: 384px;
+    }
+    
+}
+
+#alex {
+    animation: name 7s ease-in-out infinite;
+}
+
 @keyframes moveUpDownT {
     0%, 100% {
         transform: translateY(0) rotate(45deg);
@@ -153,3 +188,79 @@
         }
 }
 
+@keyframes stroke {
+    0% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 black,  
+            2px -2px 0 black,
+            -2px  2px 0 black,
+            2px  2px 0 black; /* Stroke color and width */
+    }
+    15% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 red,  
+            2px -2px 0 red,
+            -2px  2px 0 red,
+            2px  2px 0 red; /* Stroke color and width */
+    }
+    30% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 yellow,  
+            2px -2px 0 yellow,
+            -2px  2px 0 yellow,
+            2px  2px 0 yellow; /* Stroke color and width */
+    }
+    45% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 pink,  
+            2px -2px 0 pink,
+            -2px  2px 0 pink,
+            2px  2px 0 pink; /* Stroke color and width */
+    }
+    60% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 blue,  
+            2px -2px 0 blue,
+            -2px  2px 0 blue,
+            2px  2px 0 blue; /* Stroke color and width */
+    }
+    75% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 cyan,  
+            2px -2px 0 cyan,
+            -2px  2px 0 cyan,
+            2px  2px 0 cyan; /* Stroke color and width */
+    }
+    90% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 brown,  
+            2px -2px 0 brown,
+            -2px  2px 0 brown,
+            2px  2px 0 brown; /* Stroke color and width */
+    }
+    100% {
+        color: white; /* Text color */
+        text-shadow: 
+            -2px -2px 0 black,  
+            2px -2px 0 black,
+            -2px  2px 0 black,
+            2px  2px 0 black; /* Stroke color and width */
+    }
+}
+
+.text-stroke {
+    color: white; /* Text color */
+    text-shadow: 
+        -2px -2px 0 black,  
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black; /* Stroke color and width */
+    animation: stroke 10s ease-in-out infinite;
+}
