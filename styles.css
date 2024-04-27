@@ -33,8 +33,8 @@
 
 .image-container {
     position: relative;
+    z-index: -1;
 }
-
 
 @keyframes moveUpDownT {
     0%, 100% {
@@ -69,7 +69,7 @@
     top: 70%; /* Set top inset */
     left: 60%; /* Set left inset */
     transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    z-index: -2; /* Ensure the triangle image is behind the selfie image */
     max-width: 100px;
     transform: rotate(45deg);
     animation: moveUpDownT 2s ease-in-out infinite;
@@ -80,7 +80,7 @@
     top: 45%; /* Set top inset */
     left: 20%; /* Set left inset */
     transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    z-index: -2; /* Ensure the triangle image is behind the selfie image */
     max-width: 50px;
     transform: rotate(-10deg);
     animation: moveUpDownS 5s ease-in-out infinite;
@@ -91,7 +91,7 @@
     top: 75%; /* Set top inset */
     left: 30%; /* Set left inset */
     transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    z-index: -2; /* Ensure the triangle image is behind the selfie image */
     max-width: 250px;
     /*animation: moveUpDownC 6s ease-in-out infinite;*/
     animation: moveUpDownC 8s ease-in-out infinite;
@@ -102,7 +102,7 @@
     top: 60%; /* Set top inset */
     left: 50%; /* Set left inset */
     transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure the triangle image is behind the selfie image */
+    z-index: -2; /* Ensure the triangle image is behind the selfie image */
     max-width: 150px;
     animation: moveUpDownC 3s ease-in-out infinite;
 }
@@ -114,7 +114,7 @@
             top: 50%; /* Set top inset */
             left: 70%; /* Set left inset */
             transform: translate(-50%, -50%);
-            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            z-index: -2; /* Ensure the triangle image is behind the selfie image */
             max-width: 50px;
             transform: rotate(45deg);
             animation: moveUpDownT 2s ease-in-out infinite;
@@ -125,7 +125,7 @@
             top: 20%; /* Set top inset */
             left: 20%; /* Set left inset */
             transform: translate(-50%, -50%);
-            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            z-index: -2; /* Ensure the triangle image is behind the selfie image */
             max-width: 50px;
             transform: rotate(-10deg);
             animation: moveUpDownS 5s ease-in-out infinite;
@@ -136,7 +136,7 @@
             top: 50%; /* Set top inset */
             left: 30%; /* Set left inset */
             transform: translate(-50%, -50%);
-            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            z-index: -2; /* Ensure the triangle image is behind the selfie image */
             max-width: 200px;
             /*animation: moveUpDownC 6s ease-in-out infinite;*/
             animation: moveUpDownC 8s ease-in-out infinite;
@@ -147,7 +147,7 @@
             top: 40%; /* Set top inset */
             left: 80%; /* Set left inset */
             transform: translate(-50%, -50%);
-            z-index: -1; /* Ensure the triangle image is behind the selfie image */
+            z-index: -2; /* Ensure the triangle image is behind the selfie image */
             max-width: 150px;
             animation: moveUpDownC 3s ease-in-out infinite;
         }
