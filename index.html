@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="x-icon" href="images/logo.png">
 </head>
 <body class="font-[Poppins]">
-    <header style="z-index: 1;" class="bg-white sticky top-0">
+    <header style="z-index: 2;" class="bg-white sticky top-0">
         <nav class="flex justify-between items-center w-[92%] mx-auto">
             <div class="font-bold text-3xl md:text-base max-w-20">
                 <img style="z-index: 2;" src="images/logo.png" alt="">
@@ -28,10 +28,10 @@
                         <a class="hover:text-cyan-400" href="#section2">Skills</a>
                     </li>
                     <li class="underline-link">
-                        <a class="hover:text-cyan-400" href="">Projects</a>
+                        <a class="hover:text-cyan-400" href="#section3">Projects</a>
                     </li>
                     <li class="underline-link">
-                        <a class="hover:text-cyan-400" href="#">Connect</a>
+                        <a class="hover:text-cyan-400" href="#section4">Connect</a>
                     </li>
                 </ul>
             </div>
@@ -113,9 +113,89 @@
         </div>
     </div>
 
-    <div id="section3">
-        <h1 class="text-white text-center font-black text-7xl text-stroke2">POJECTS</h1class>
-    </div>
+    <div id="section3" >
+        <h1 class="text-white text-center font-black text-6xl text-stroke2 m-5">POJECTS</h1>
+            <div class="flex flex-wrap justify-center items-center md:flex-nowrap md:flex-col md:justify-center md:items-center">
+                <div class="w-96 outline m-5 pt-0 shadow-2xl">
+                    <section class="container2">
+                        <div class="slide-wrapper">
+                            <div class="slider">    
+                                <img id="slide-1" src="images/project1-1.png" class="max-w-sm mx-auto" alt="">
+                                <img id="slide-2" src="images/project1-2.png" class="max-w-sm mx-auto" alt="">
+                                <img id="slide-3" src="images/project1-3.png" class="max-w-sm mx-auto" alt="">
+                                <img id="slide-4" src="images/project1-4.png" class="max-w-sm mx-auto" alt="">
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                                <a href="#slide-4"></a>
+                            </div>
+                        </div>
+                    </section>
+                    <h1 class="text-center font-semibold text-xl">Instagram Clone</h1>
+                    <br>
+                    <p class="text-center pb-2">A fullstack instagram clone web app built with flask. 
+                        Users can create accounts, upload posts with pictures and delete them.
+                    </p>
+                    <br>
+                    <p class="text-center font-semibold pb-5 hover:underline">
+                        <a  href="https://www.youtube.com/watch?v=fkOSPRHyO3M" target="_blank">Video Demo</a>
+                    </p>
+                    
+                </div>
+                <div class="w-96 outline m-5 pt-0 shadow-2xl">
+                    <section class="container2">
+                        <div class="slide-wrapper">
+                            <div class="slider">    
+                                <img id="slide-21" src="images/project2-1.png" class="max-w-sm mx-auto" alt="">
+                                <img id="slide-22" src="images/project2-2.png" class="max-w-sm mx-auto" alt="">
+                                <img id="slide-23" src="images/project2-3.png" class="max-w-sm mx-auto" alt="">
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-21"></a>
+                                <a href="#slide-22"></a>
+                                <a href="#slide-23"></a>
+                            </div>
+                        </div>
+                    </section>
+                    <h1 class="text-center font-semibold text-xl">Auctions Website</h1>
+                    <br>
+                    <p class="text-center pb-2">A fullstack auctions website built with Django.
+                        Users can create new auction listings with a price and picture.
+                        Users can bid on each item and the highest bid wins. Users can also comment on listings.
+                    </p>
+                    <br>
+                    <p class="text-center font-semibold pb-5 hover:underline">
+                        <a  href="https://www.youtube.com/watch?v=o-gqyOwh_Q8" target="_blank">Video Demo</a>
+                    </p>
+                </div>
+                <div class="w-96 outline m-5 pt-0 shadow-2xl">
+                    <section class="container2">
+                        <div class="slide-wrapper">
+                            <div class="slider">    
+                                <img id="slide-31" src="images/project3-1.png" class="max-w-sm mx-auto" alt="">
+                                <img id="slide-32" src="images/project3-2.png" class="max-w-sm mx-auto" alt="">
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-31"></a>
+                                <a href="#slide-32"></a>
+                            </div>
+                        </div>
+                    </section>
+                    <h1 class="text-center font-semibold text-xl">Inspirational Quote Generator</h1>
+                    <br>
+                    <p class="text-center pb-2">A website which generates random inspirational quotes
+                        from an API.
+                    </p>
+                    <br>
+                    <p class="text-center font-semibold pb-5 hover:underline">
+                        <a  href="https://inspo-quote-generator.netlify.app/" target="_blank">Live Link</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1 id="section4" class="m-10 text-center font-bold hover:underline text-4xl"><a href="mailto:shasho68.5@gmail.com">Click here to write me an email!</a></h1>
     <script>
         const navLinks = document.querySelector('.nav-links');
         const imageContainer = document.querySelector('.image-container');
@@ -123,6 +203,18 @@
             e.name = e.name === 'menu' ? 'close' : 'menu';
             navLinks.classList.toggle('top-[9%]');
         }
+
+        // Get all the links inside the nav-links container
+        const links = document.querySelectorAll('.nav-links a');
+        const ion = document.querySelector('ion-icon');
+        // Add an event listener to each link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove the class that opens the menu
+                navLinks.classList.remove('top-[9%]');
+                ion.name = 'menu';
+            });
+        });
     </script>
 </body>
 </html>
