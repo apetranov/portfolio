@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="x-icon" href="images/logo.png">
 </head>
 <body class="font-[Poppins]">
-    <header class="bg-white sticky top-0">
+    <header style="z-index: 1;" class="bg-white sticky top-0">
         <nav class="flex justify-between items-center w-[92%] mx-auto">
             <div class="font-bold text-3xl md:text-base max-w-20">
                 <img style="z-index: 2;" src="images/logo.png" alt="">
@@ -65,10 +65,51 @@
         </div>
     </div>
 
-    <div id="section2" class="m-5 flex justify-center items-center font-black text-7xl">
-        <div>
-            <h1 class="text-white text-stroke" style="top: 1px;">SKILLS</h1>
+    <div style="z-index: -1;" id="section2" class="m-5 flex justify-center items-center">
+        <div style="z-index: -1;" class="block">
+            <h1 class="text-white text-center font-black text-7xl text-stroke" style="top: 1px;">SKILLS</h1>
+            <div class="m-5 flex justify-center items-center flex-wrap md:flex-nowrap">
+                <div class="text-center mb-3 md:mb-0 mr-5 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/git.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">Git</span>
+                </div>
+                <div class="text-center mb-3 md:mb-0 mr-5 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/github.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">GitHub</span>
+                </div>
+                <div class="text-center mb-3 md:mb-0 mr-5 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/html.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">HTML</span>
+                </div>
+                <div class="text-center mb-3 md:mb-0 mr-5 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/css.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">CSS</span>
+                </div>
+                <div class="text-center mb-3 md:mb-0 mr-5 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/python.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">Python</span>
+                </div>
+                <div class="text-center mb-3 md:mb-0 mr-5 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/django.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">Django</span>
+                </div>
+                <div class="text-center mb-3 md:mb-0 p-7 drop-shadow">
+                    <img style="display: inline-block;" src="images/sql.png" class="max-w-12" alt="">
+                    <br>
+                    <span class="font-bold text-lg">SQL</span>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div id="section3">
+        <h1 class="text-white text-center font-black text-7xl text-stroke2">POJECTS</h1class>
     </div>
     <script>
         const navLinks = document.querySelector('.nav-links');
